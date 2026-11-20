@@ -4,7 +4,7 @@
   "frozen_evaluation": {
     "prediction_rows": 107742,
     "metric_rows": 3648,
-    "maximum_metric_difference": 1.4551915228366852e-11,
+    "maximum_metric_difference": 0.0,
     "ks_checks": 1952,
     "maximum_ks_difference": 1.1102230246251565e-16,
     "signed_error_rows": 192,
@@ -196,5 +196,13 @@
     "replicates_per_group": 2000,
     "confidence_intervals_match_exactly": true,
     "transfer_criterion_matches": true
+  },
+  "fresh_checkout_data_extraction_and_metric_check": "PASS",
+  "forest_selection_test": {
+    "holdout": "india",
+    "condition": "filtered",
+    "fits": 36,
+    "selected_candidate": "candidate_008",
+    "matches_archived_selection": true
   }
 }

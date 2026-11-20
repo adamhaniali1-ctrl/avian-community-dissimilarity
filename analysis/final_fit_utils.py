@@ -24,16 +24,6 @@ from torch import nn
 
 SSI_COLUMNS = [f"ssi_{index:03d}" for index in range(60)]
 
-STAGE_PREFIXES = (
-    "config/final_fit_and_seal.yaml",
-    "scripts/final_fit_utils.py",
-    "scripts/run_final_fit_and_seal.py",
-    "scripts/fit_final_gdm.R",
-    "scripts/validate_final_fit_and_seal.py",
-    "scripts/validate_final_gdm.R",
-    "audit_reports/final_fit_and_seal_audit.md",
-    "results/final_fit_and_seal",
-)
 
 @dataclass(frozen=True)
 class Architecture:

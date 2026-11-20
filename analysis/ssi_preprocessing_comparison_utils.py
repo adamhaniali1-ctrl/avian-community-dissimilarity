@@ -42,7 +42,6 @@ SSI_COLUMNS = [f"ssi_{index:03d}" for index in range(60)]
 
 PREPROCESSING_METHODS = ("STANDARD", "ASINH_STANDARD")
 
-SEEDS = (42, 43, 44)
 
 HOLDOUTS = ("india", "malaysia_safe", "taiwan", "usa")
 

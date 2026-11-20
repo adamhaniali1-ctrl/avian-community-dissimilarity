@@ -24,8 +24,8 @@ def audit(out):
     metric_keys = ['outer_holdout', 'data_condition', 'pair_role', 'dataset', 'method', 'metric']
     a = metrics.set_index(metric_keys).sort_index()
     b = saved.set_index(metric_keys).sort_index()
-    av = pd.to_numeric(a.estimate, errors='coerce').to_numpy(float)
-    bv = pd.to_numeric(b.estimate, errors='coerce').to_numpy(float)
+    av = np.array([float(value) if str(value) else np.nan for value in a.estimate], dtype=float)
+    bv = np.array([float(value) if str(value) else np.nan for value in b.estimate], dtype=float)
     np.testing.assert_allclose(av, bv, rtol=5e-15, atol=1e-12, equal_nan=True)
     write_csv(aligned, out / 'aligned_predictions.csv')
     write_csv(metrics, out / 'metrics_by_dataset.csv')

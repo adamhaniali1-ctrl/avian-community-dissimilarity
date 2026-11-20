@@ -14,13 +14,7 @@ from .final_evaluation_utils import ALL_METHODS, CONDITIONS, HOLDOUTS, PREDICTIV
 
 ROOT = Path(__file__).resolve().parents[1]
 
-OUTPUT_ROOT = ROOT / "results/final_evaluation"
 
-STAGE_PATHS = (
-    "config/final_evaluation.yaml", "scripts/final_evaluation_utils.py",
-    "scripts/run_final_evaluation.py", "scripts/validate_final_evaluation.py",
-    "audit_reports/final_evaluation_audit.md", "results/final_evaluation",
-)
 
 IDENTIFIERS = ["outer_holdout", "data_condition", "dataset", "pair_role", "pair_id", "event_uid_a", "event_uid_b"]
 

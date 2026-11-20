@@ -25,6 +25,11 @@
       "identifier": "10.5281/zenodo.7446640",
       "relation": "isDerivedFrom",
       "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24394649",
+      "relation": "requires",
+      "scheme": "doi"
     }
   ]
 }

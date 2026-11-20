@@ -24,32 +24,9 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 from sklearn.preprocessing import StandardScaler
 
-PREDICTIVE_METRICS = ("mae", "rmse", "r2", "spearman")
 
-BASELINE_ORDER = (
-    "training_mean",
-    "author_unscaled_ssi_euclidean",
-    "author_unscaled_lf_euclidean",
-    "scaled_ssi_isotonic",
-    "scaled_lf_isotonic",
-)
 
-PROTECTED_EXPLICIT_FILES = (
-    "config/experiment_config.yaml",
-    "audit_reports/data_audit_report.md",
-    "audit_reports/experiment_manifest_audit.md",
-    "scripts/data_preparation_script.py",
-    "scripts/data_audit_script.py",
-    "scripts/create_experiment_manifests.py",
-    "scripts/validate_experiment_manifests.py",
-)
 
-PROTECTED_DIRECTORY_NAMES = (
-    "data_clean",
-    "original_downloads",
-    "sarabsethi-sscape-avian-div-generalisability-d9f2547",
-    "experiments",
-)
 
 def sha256_file(path: Path) -> str:
     """Return a streaming SHA-256 digest."""

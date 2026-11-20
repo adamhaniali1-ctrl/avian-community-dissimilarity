@@ -34,24 +34,12 @@ HOLDOUTS = ("india", "malaysia_safe", "taiwan", "usa")
 
 CONDITIONS = ("author_compatible", "filtered")
 
-SEEDS = (42, 43, 44, 45, 46)
 
-CELLS = (
-    ("india", "author_compatible", "STANDARD", "A", 3),
-    ("india", "filtered", "STANDARD", "A", 3),
-    ("malaysia_safe", "author_compatible", "ASINH_STANDARD", "C", 6),
-    ("malaysia_safe", "filtered", "ASINH_STANDARD", "D", 3),
-    ("taiwan", "author_compatible", "ASINH_STANDARD", "A", 3),
-    ("taiwan", "filtered", "ASINH_STANDARD", "A", 7),
-    ("usa", "author_compatible", "ASINH_STANDARD", "B", 2),
-    ("usa", "filtered", "ASINH_STANDARD", "B", 2),
-)
 
 GDM_PRED_COLUMNS = ["outer_holdout", "data_condition", "dataset", "pair_role", "pair_id", "event_uid_a", "event_uid_b", "model_id", "prediction"]
 
 SEED_PRED_COLUMNS = ["outer_holdout", "data_condition", "dataset", "pair_role", "pair_id", "event_uid_a", "event_uid_b", "model_id", "architecture", "preprocessing", "seed", "epoch_count", "prediction"]
 
-ENSEMBLE_COLUMNS = ["outer_holdout", "data_condition", "dataset", "pair_role", "pair_id", "event_uid_a", "event_uid_b", "model_id", "architecture", "preprocessing", "valid_seed_count", "ensemble_prediction"]
 
 def load_manifest(path: Path) -> tuple[pd.DataFrame, np.ndarray]:
     """Load metadata for all roles while converting targets only for final_train."""

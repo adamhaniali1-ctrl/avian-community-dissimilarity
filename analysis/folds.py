@@ -18,38 +18,16 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 RESULT_ROOT = PROJECT_ROOT / "results/ssi_preprocessing_comparison"
 
-PROGRESS_ROOT = RESULT_ROOT / ".fit_progress"
 
-REPORT_PATH = PROJECT_ROOT / "audit_reports/ssi_preprocessing_comparison_audit.md"
 
-EXPECTED_PROTECTED_COUNT = 276
 
-EXPECTED_PROTECTED_DIGEST = "8f3f325caa7b7a30db2df22f3b75411654baf7fafb27a169453a9932bb07c5ff"
 
 OUTPUT_NAMES = (
     "inner_predictions.csv", "inner_metrics.csv", "epoch_history.csv", "preprocessing_parameters.csv",
     "selected_preprocessing.csv", "fit_summary.csv", "audit.md",
 )
 
-STAGE_PATHS = {
-    "config/ssi_preprocessing_comparison.yaml",
-    "scripts/ssi_preprocessing_comparison_utils.py",
-    "scripts/run_ssi_preprocessing_comparison.py",
-    "scripts/validate_ssi_preprocessing_comparison.py",
-    "audit_reports/ssi_preprocessing_comparison_audit.md",
-    *(f"results/ssi_preprocessing_comparison/{name}" for name in OUTPUT_NAMES),
-}
 
-TRAINING_SETTINGS = {
-    "torch_threads": 4,
-    "batch_size": 256,
-    "validation_batch_size": 1024,
-    "learning_rate": 0.0003,
-    "weight_decay": 0.0001,
-    "maximum_epochs": 200,
-    "patience": 15,
-    "minimum_improvement": 0.0001,
-}
 
 def prepare_fold(
     pairs: pd.DataFrame, validation_dataset: str, feature_index: pd.DataFrame, method: str

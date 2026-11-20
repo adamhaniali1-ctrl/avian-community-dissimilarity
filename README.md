@@ -19,6 +19,8 @@ Check the installed GDM version with `Rscript -e 'packageVersion("gdm")'`. For t
 
 ## Data and saved results
 
+The permanent data archive is [Zenodo 10.5281/zenodo.24394649](https://doi.org/10.5281/zenodo.24394649).
+
 Download the review archive from the [v1.0.0 release](https://github.com/adamhaniali1-ctrl/avian-community-dissimilarity/releases/tag/v1.0.0), then extract and verify it:
 
 ```sh

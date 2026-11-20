@@ -18,13 +18,7 @@ import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
-EXPERIMENTS_DIR = PROJECT_ROOT / "experiments"
 
-PROTECTED_DIRS = (
-    PROJECT_ROOT / "original_downloads",
-    PROJECT_ROOT / "sarabsethi-sscape-avian-div-generalisability-d9f2547",
-    PROJECT_ROOT / "data_clean",
-)
 
 BASE_COLUMNS = ["event_uid", "dataset", "base_role", "random_seed"]
 

@@ -28,9 +28,7 @@ HOLDOUTS = ("india", "malaysia_safe", "taiwan", "usa")
 
 CONDITIONS = ("author_compatible", "filtered")
 
-SEEDS = (42, 43, 44)
 
-CANDIDATE_ORDER = ("A", "B", "C", "D")
 
 @dataclass(frozen=True)
 class CandidateSpec:
@@ -43,6 +41,7 @@ class CandidateSpec:
     dropout: float
     learning_rate: float
     weight_decay: float
+
 
 CANDIDATES = {
     "A": CandidateSpec("A", 128, 64, 32, 0.10, 0.0003, 0.0001),

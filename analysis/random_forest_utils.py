@@ -22,7 +22,6 @@ from sklearn.model_selection import ParameterGrid
 
 from sklearn.preprocessing import StandardScaler
 
-DATASETS = ("india", "malaysia_safe", "taiwan", "usa")
 
 CONDITIONS = ("author_compatible", "filtered")
 
@@ -30,17 +29,8 @@ FEATURE_REGIMES = ("SSI", "LF", "combined")
 
 FEATURE_FAMILIES = ("SSI", "LF")
 
-METRICS = ("mae", "rmse", "r2", "spearman")
 
-STAGE_NEW_EXACT_PATHS = {
-    "config/random_forest_config.yaml",
-    "scripts/random_forest_utils.py",
-    "scripts/run_pairwise_random_forest.py",
-    "scripts/validate_pairwise_random_forest.py",
-    "audit_reports/pairwise_random_forest_audit.md",
-}
 
-STAGE_NEW_DIRECTORY = "results/pairwise_random_forest"
 
 def feature_columns(frame: pd.DataFrame) -> dict[str, list[str]]:
     """Verify and return the exact SSI and LF feature families."""
@@ -341,31 +331,3 @@ def safe_result_path(path: Path, results_root: Path) -> Path:
     if not resolved.is_relative_to(results_root.resolve()):
         raise ValueError(f"Refusing to write outside the random-forest results tree: {resolved}")
     return resolved
-
-__all__ = [
-    "CONDITIONS",
-    "DATASETS",
-    "FEATURE_FAMILIES",
-    "FEATURE_REGIMES",
-    "METRICS",
-    "atomic_text_write",
-    "build_pair_representation",
-    "candidate_grid",
-    "dataframe_text",
-    "ensure_prediction_range",
-    "feature_columns",
-    "feature_importance_rows",
-    "fit_family_scalers",
-    "index_features",
-    "protected_input_paths",
-    "protected_inventory_digest",
-    "protected_inventory_lines",
-    "random_forest",
-    "rank_candidate_rows",
-    "regression_metrics",
-    "safe_result_path",
-    "scaler_parameter_rows",
-    "serialize_max_depth",
-    "serialize_max_features",
-    "sha256_file",
-]
