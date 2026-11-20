@@ -1,0 +1,213 @@
+[
+  {
+    "source": "scripts/baseline_utils.py",
+    "source_sha256": "a940bdc431be64b059dfdaaa69a97be5a1ce6ca94c2eb40ff6df47e8370e2ac9",
+    "publication_module": "analysis/baseline_utils.py",
+    "retained_functions_and_classes": [
+      "sha256_file",
+      "identify_feature_columns",
+      "indexed_features",
+      "endpoint_arrays",
+      "fit_endpoint_scaler",
+      "euclidean_distances",
+      "scaled_euclidean_distances",
+      "fit_isotonic",
+      "predict_isotonic",
+      "spearman_value",
+      "predictive_metrics",
+      "dataframe_text",
+      "atomic_text_write",
+      "prior_csv_match"
+    ],
+    "changes": "Scientific function and class syntax preserved. Comments and obsolete stage entry points removed; imports and output paths adapted.",
+    "function_syntax_equivalence_verified": true
+  },
+  {
+    "source": "scripts/random_forest_utils.py",
+    "source_sha256": "682651e6609fa736cd6c919096fcbde05324333747b0f7b625832c3d37c9f362",
+    "publication_module": "analysis/random_forest_utils.py",
+    "retained_functions_and_classes": [
+      "feature_columns",
+      "index_features",
+      "endpoint_arrays",
+      "fit_family_scalers",
+      "scaled_endpoint_arrays",
+      "symmetric_pair_representation",
+      "build_pair_representation",
+      "regression_metrics",
+      "candidate_grid",
+      "random_forest",
+      "serialize_max_depth",
+      "serialize_max_features",
+      "candidate_comparator",
+      "rank_candidate_rows",
+      "scaler_parameter_rows",
+      "feature_importance_rows",
+      "ensure_prediction_range",
+      "safe_result_path"
+    ],
+    "changes": "Scientific function and class syntax preserved. Comments and obsolete stage entry points removed; imports and output paths adapted.",
+    "function_syntax_equivalence_verified": true
+  },
+  {
+    "source": "scripts/ssi_preprocessing_comparison_utils.py",
+    "source_sha256": "4c0e32732b3aba632f701e077c34a2d6598934d53a32e19767c3e5b0bca4e1b2",
+    "publication_module": "analysis/ssi_preprocessing_comparison_utils.py",
+    "retained_functions_and_classes": [
+      "PreprocessingFit",
+      "RawLogitCandidateA",
+      "sha256_file",
+      "canonical_json",
+      "atomic_write_text",
+      "atomic_write_csv",
+      "atomic_write_npz",
+      "set_deterministic",
+      "state_hash",
+      "initialize_output",
+      "fit_preprocessing",
+      "apply_preprocessing",
+      "inverse_preprocessing",
+      "pair_arrays",
+      "regression_metrics",
+      "gradient_norms",
+      "all_parameters_finite",
+      "evaluate",
+      "fit_identifier",
+      "run_fit"
+    ],
+    "changes": "Scientific function and class syntax preserved. Comments and obsolete stage entry points removed; imports and output paths adapted.",
+    "function_syntax_equivalence_verified": true
+  },
+  {
+    "source": "scripts/ssi_siamese_architecture_utils.py",
+    "source_sha256": "aa618ac1f7d77af4dfff83967697d9ac334713020d7a97fbad3888c4d1c5423d",
+    "publication_module": "analysis/ssi_siamese_architecture_utils.py",
+    "retained_functions_and_classes": [
+      "CandidateSpec",
+      "RawLogitSiamese",
+      "initialize_output",
+      "evaluate",
+      "fit_identifier",
+      "run_fit",
+      "parameter_count"
+    ],
+    "changes": "Scientific function and class syntax preserved. Comments and obsolete stage entry points removed; imports and output paths adapted.",
+    "function_syntax_equivalence_verified": true
+  },
+  {
+    "source": "scripts/final_fit_utils.py",
+    "source_sha256": "1f3cef0bbd04b7be3de7079117ee311cf8eb9a0a0befc60792735c77c48ec1a2",
+    "publication_module": "analysis/final_fit_utils.py",
+    "retained_functions_and_classes": [
+      "Architecture",
+      "RawLogitSiamese",
+      "sha256_file",
+      "atomic_bytes",
+      "atomic_text",
+      "atomic_csv",
+      "set_deterministic",
+      "state_hash",
+      "initialize_output",
+      "fit_preprocessing",
+      "apply_preprocessing",
+      "predict_model",
+      "dataframe_digest",
+      "all_parameters_finite",
+      "parameter_count"
+    ],
+    "changes": "Scientific function and class syntax preserved. Comments and obsolete stage entry points removed; imports and output paths adapted.",
+    "function_syntax_equivalence_verified": true
+  },
+  {
+    "source": "scripts/final_evaluation_utils.py",
+    "source_sha256": "46fccfaa1ec01dfcdd2625c055acd3ed79d568cf58e70975e34a8838461b96c9",
+    "publication_module": "analysis/final_evaluation_utils.py",
+    "retained_functions_and_classes": [
+      "sha256_file",
+      "atomic_csv",
+      "atomic_text",
+      "rank_metrics",
+      "calibration",
+      "point_metrics",
+      "weighted_mae",
+      "weighted_midrank",
+      "weighted_spearman",
+      "fixture_check",
+      "group_seed",
+      "bootstrap_group",
+      "percentile",
+      "wasserstein_1d",
+      "compression_label"
+    ],
+    "changes": "Scientific function and class syntax preserved. Comments and obsolete stage entry points removed; imports and output paths adapted.",
+    "function_syntax_equivalence_verified": true
+  },
+  {
+    "source": "scripts/run_final_fit_and_seal.py",
+    "source_sha256": "31b0050a42ef85788139caa7cae7ccac2d781bbfaaa34e7680cc00b32f52ebbe",
+    "publication_module": "analysis/fit_models.py",
+    "retained_functions_and_classes": [
+      "load_manifest",
+      "endpoint_arrays",
+      "checkpoint_to_temp",
+      "train_siamese",
+      "gdm_table",
+      "run_gdm_fit",
+      "run_siamese_fit"
+    ],
+    "changes": "Scientific function and class syntax preserved. Comments and obsolete stage entry points removed; imports and output paths adapted.",
+    "function_syntax_equivalence_verified": true
+  },
+  {
+    "source": "scripts/create_experiment_manifests.py",
+    "source_sha256": "c331b50cfd2e4fcb4ef8b8264b4f236c7c7e5c0f3bbb82c2300c5488e5e04667",
+    "publication_module": "analysis/manifests.py",
+    "retained_functions_and_classes": [
+      "derived_seed",
+      "create_base_split",
+      "dataframe_text",
+      "condition_species_sets",
+      "create_event_roles",
+      "pair_count",
+      "sample_pair_ranks",
+      "unrank_pair",
+      "jaccard_distance",
+      "deterministic_pair_id",
+      "select_pair_rows",
+      "eligible_pool",
+      "append_count_row",
+      "build_pair_manifests"
+    ],
+    "changes": "Scientific function and class syntax preserved. Comments and obsolete stage entry points removed; imports and output paths adapted.",
+    "function_syntax_equivalence_verified": true
+  },
+  {
+    "source": "scripts/run_final_evaluation.py",
+    "source_sha256": "98df27c2410569ad2710547a33035486d191bb3eb3d6d70686317767444cbeb9",
+    "publication_module": "analysis/evaluation.py",
+    "retained_functions_and_classes": [
+      "community_map",
+      "jaccard",
+      "align_condition",
+      "metric_rows",
+      "macro_rows",
+      "bootstrap_rows",
+      "seed_metric_rows",
+      "gate_rows",
+      "failure_rows",
+      "target_stability_rows"
+    ],
+    "changes": "Scientific function and class syntax preserved. Comments and obsolete stage entry points removed; imports and output paths adapted.",
+    "function_syntax_equivalence_verified": true
+  },
+  {
+    "source": "scripts/run_ssi_preprocessing_comparison.py",
+    "source_sha256": "476ac56cdb86f099c0172ba89dd551434450c703a611b5924099022ea52b2167",
+    "publication_module": "analysis/folds.py",
+    "retained_functions_and_classes": [
+      "prepare_fold"
+    ],
+    "changes": "Scientific function and class syntax preserved. Comments and obsolete stage entry points removed; imports and output paths adapted.",
+    "function_syntax_equivalence_verified": true
+  }
+]

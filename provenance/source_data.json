@@ -1,0 +1,51 @@
+{
+  "source_dataset_doi": "10.5281/zenodo.7446640",
+  "source_article_doi": "10.1038/s41559-023-02148-z",
+  "source_archive": {
+    "path": "original_downloads/parsed_pc_data.zip",
+    "bytes": 3492642138,
+    "sha256": "c21a8737a4bc192694aee8bfab5b772e294e7fdffe52f391217ab45fc32381bf"
+  },
+  "source_dataset_metadata": {
+    "title": "Data associated with sscape-avian-div-generalisability",
+    "doi": "10.5281/zenodo.7446640",
+    "publication_date": "2022-12-07",
+    "description": "<p>Data for repository located at https://github.com/sarabsethi/sscape-avian-div-generalisability</p>\n\n<p>Unzip the file to the directory sscape-avian-div-generalisability/parsed_pc_data and follow the instructions in the repository to run the code.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Sethi, Sarab Singh",
+        "affiliation": "University of Cambridge",
+        "orcid": "0000-0002-5939-0432"
+      }
+    ],
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 1,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "7410357"
+          }
+        }
+      ]
+    }
+  },
+  "derived_tables": {
+    "event_features.csv": {
+      "events": 8023,
+      "ssi_columns": 60,
+      "lf_columns": 128
+    },
+    "event_species.csv": "Exact released bird labels; one row per event label."
+  },
+  "third_party_source_code_redistributed": false
+}

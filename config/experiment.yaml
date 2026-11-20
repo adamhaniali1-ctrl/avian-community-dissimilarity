@@ -1,0 +1,101 @@
+version: 1
+
+random_seed: 42
+
+source_files:
+  event_features: data_clean/event_features.csv
+  event_species: data_clean/event_species.csv
+  original_audit: audit_reports/data_audit_report.md
+  expected_sha256:
+    event_features: 53acb9ecb3e10415f2b020595c1b19379b2c81e79a294f6ff04709d46b2ca11b
+    event_species: bd653c3d7dcdb48331e0f47721e4824fec7f3bbe06ec93b014d763abda7c1977
+
+datasets:
+  - india
+  - malaysia_safe
+  - taiwan
+  - usa
+
+expected_event_counts:
+  india: 147
+  malaysia_safe: 977
+  taiwan: 165
+  usa: 6734
+
+outer_holdout_order:
+  - india
+  - malaysia_safe
+  - taiwan
+  - usa
+
+base_split:
+  development_fraction: 0.70
+  familiar_test_fraction: 0.30
+  rounding_rule: floor_development_remainder_familiar_test
+  assignment_rule: sort_event_uids_then_shuffle_each_dataset_with_sha256_seeded_substream
+  assignment_scope: permanent_per_source_dataset_before_pair_generation
+
+data_conditions:
+  author_compatible:
+    retain_all_events: true
+    retain_empty_communities: true
+    remove_exact_labels: []
+    empty_vs_empty_jaccard_distance: 0.0
+    empty_vs_nonempty_jaccard_distance: 1.0
+    taxonomic_harmonization: none
+  filtered:
+    retain_all_events: false
+    exclude_empty_communities: true
+    remove_exact_labels:
+      - NA
+    retain_nonempty_events_after_label_removal: true
+    taxonomic_harmonization: none
+
+jaccard:
+  formula: 1_minus_intersection_size_divided_by_union_size
+  labels_are_exact_sets: true
+  empty_vs_empty: 0.0
+  empty_vs_nonempty: 1.0
+  valid_range:
+    - 0.0
+    - 1.0
+
+pair_generation:
+  within_dataset_only: true
+  unordered: true
+  self_pairs: false
+  unique_within_fold_and_role: true
+  selection_without_replacement: true
+  selection_ignores_jaccard: true
+  sampling_method: sample_unique_unordered_pair_ranks_without_materializing_candidates
+  random_substreams: sha256_of_root_seed_and_pair_context
+
+pair_balancing:
+  preserve_all_eligible_events: true
+  outer_final_training_rule: select_smallest_available_pair_count_from_each_contributing_dataset
+  inner_fold_rule: reuse_exact_outer_final_train_pairs_for_all_three_source_datasets
+  inner_fold_pair_count_rule: use_outer_final_train_selected_count_per_dataset_as_q
+  inner_fold_role_rule: change_only_pair_role_between_train_and_validation
+  familiar_test_rule: equal_sample_using_smallest_familiar_pair_pool_among_source_datasets
+  unseen_test_rule: equal_sample_using_smallest_unseen_pair_pool_across_outer_holdouts_within_condition
+  synthetic_pairs: false
+
+later_modelling:
+  hyperparameter_selection_metric: mean_validation_MAE_across_ecosystems
+  feature_scaling_rule: fit_scalers_using_training_data_only_within_each_permitted_fold
+  shared_pair_manifests_for:
+    - SSI_only
+    - LF_only
+    - combined_features
+    - random_forest
+    - siamese_network
+
+expected_condition_counts:
+  author_compatible:
+    eligible_events: 8023
+    excluded_empty_events: 0
+    exact_NA_events: 23
+  filtered:
+    eligible_events: 7637
+    excluded_empty_events: 386
+    exact_NA_events_retained_after_removal: 23

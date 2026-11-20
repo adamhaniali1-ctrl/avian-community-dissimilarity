@@ -1,0 +1,136 @@
+{
+  "random_seed": 42,
+  "holdouts": [
+    "india",
+    "malaysia_safe",
+    "taiwan",
+    "usa"
+  ],
+  "conditions": [
+    "filtered",
+    "author_compatible"
+  ],
+  "forest": {
+    "implementation": "sklearn.ensemble.RandomForestRegressor",
+    "fixed_parameters": {
+      "n_estimators": 300,
+      "criterion": "squared_error",
+      "min_samples_split": 2,
+      "bootstrap": true,
+      "max_samples": null,
+      "ccp_alpha": 0.0,
+      "random_state": 42,
+      "n_jobs": -1
+    },
+    "parameter_grid": {
+      "max_depth": [
+        null,
+        20
+      ],
+      "min_samples_leaf": [
+        1,
+        5,
+        20
+      ],
+      "max_features": [
+        "sqrt",
+        1.0
+      ]
+    },
+    "grid_implementation": "sklearn.model_selection.ParameterGrid",
+    "expected_candidate_count": 12,
+    "candidate_id_format": "candidate_000_through_candidate_011_in_parameter_grid_order",
+    "grid_search_cv": false,
+    "randomized_search": false
+  },
+  "neural_selection": {
+    "framework": "pytorch",
+    "device": "cpu",
+    "deterministic_algorithms": true,
+    "torch_threads": 4,
+    "optimizer": "torch.optim.AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "loss": "torch.nn.BCEWithLogitsLoss",
+    "loss_reduction": "mean",
+    "targets": "continuous_jaccard_distance",
+    "batch_size": 256,
+    "validation_batch_size": 1024,
+    "maximum_epochs": 200,
+    "restore_best_validation_weights": true,
+    "data_loader_workers": 0,
+    "patience": 15,
+    "minimum_improvement": 0.0001
+  },
+  "final_cells": [
+    {
+      "holdout": "india",
+      "condition": "author_compatible",
+      "preprocessing": "STANDARD",
+      "architecture": "A",
+      "epochs": 3
+    },
+    {
+      "holdout": "india",
+      "condition": "filtered",
+      "preprocessing": "STANDARD",
+      "architecture": "A",
+      "epochs": 3
+    },
+    {
+      "holdout": "malaysia_safe",
+      "condition": "author_compatible",
+      "preprocessing": "ASINH_STANDARD",
+      "architecture": "C",
+      "epochs": 6
+    },
+    {
+      "holdout": "malaysia_safe",
+      "condition": "filtered",
+      "preprocessing": "ASINH_STANDARD",
+      "architecture": "D",
+      "epochs": 3
+    },
+    {
+      "holdout": "taiwan",
+      "condition": "author_compatible",
+      "preprocessing": "ASINH_STANDARD",
+      "architecture": "A",
+      "epochs": 3
+    },
+    {
+      "holdout": "taiwan",
+      "condition": "filtered",
+      "preprocessing": "ASINH_STANDARD",
+      "architecture": "A",
+      "epochs": 7
+    },
+    {
+      "holdout": "usa",
+      "condition": "author_compatible",
+      "preprocessing": "ASINH_STANDARD",
+      "architecture": "B",
+      "epochs": 2
+    },
+    {
+      "holdout": "usa",
+      "condition": "filtered",
+      "preprocessing": "ASINH_STANDARD",
+      "architecture": "B",
+      "epochs": 2
+    }
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "bootstrap_replicates": 2000,
+  "data_source": {
+    "article_doi": "10.1038/s41559-023-02148-z",
+    "dataset_doi": "10.5281/zenodo.7446640",
+    "license": "CC-BY-4.0"
+  }
+}

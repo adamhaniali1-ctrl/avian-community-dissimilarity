@@ -1,0 +1,30 @@
+{
+  "title": "Avian community dissimilarity: analysis and reproducibility code",
+  "upload_type": "software",
+  "description": "Analysis and reproducibility code for predicting avian community dissimilarity from soundscape indices. Includes fixed experiment settings and a separate review archive with processed inputs, predictions and model checkpoints.",
+  "creators": [
+    {
+      "name": "Ali, Adam",
+      "affiliation": "Independent researcher, Amman, Jordan"
+    }
+  ],
+  "version": "1.0.0",
+  "license": "mit",
+  "keywords": [
+    "ecoacoustics",
+    "avian communities",
+    "dissimilarity"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.1038/s41559-023-02148-z",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.7446640",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
+    }
+  ]
+}

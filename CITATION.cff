@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite this software release and the source dataset when reusing this analysis."
+type: software
+title: "Avian community dissimilarity: analysis and reproducibility code"
+authors:
+  - family-names: Ali
+    given-names: Adam
+version: 1.0.0
+date-released: 2026-11-20
+url: "https://github.com/adamhaniali1-ctrl/avian-community-dissimilarity"
+repository-code: "https://github.com/adamhaniali1-ctrl/avian-community-dissimilarity"
+license: MIT
+keywords:
+  - ecoacoustics
+  - avian communities
+  - dissimilarity

@@ -1,0 +1,200 @@
+{
+  "scientific_function_or_class_equivalence_checks": 121,
+  "manifests_regenerated_byte_identically": 33,
+  "frozen_evaluation": {
+    "prediction_rows": 107742,
+    "metric_rows": 3648,
+    "maximum_metric_difference": 1.4551915228366852e-11,
+    "ks_checks": 1952,
+    "maximum_ks_difference": 1.1102230246251565e-16,
+    "signed_error_rows": 192,
+    "status": "PASS"
+  },
+  "saved_checkpoint_inference": {
+    "siamese_checkpoints": 40,
+    "gdm_checkpoints": 8,
+    "maximum_siamese_prediction_difference": 0.0,
+    "status": "PASS"
+  },
+  "final_refit_maximum_prediction_differences": {
+    "india__author_compatible": {
+      "training_mean": 0.0,
+      "training_median": 0.0,
+      "ssi_raw_euclidean": 0.0,
+      "ssi_isotonic": 0.0,
+      "pairwise_random_forest_ssi": 6.661338147750939e-16,
+      "gdm": 0.0,
+      "siamese_ensemble_ssi": 0.0
+    },
+    "india__filtered": {
+      "training_mean": 0.0,
+      "training_median": 0.0,
+      "ssi_raw_euclidean": 0.0,
+      "ssi_isotonic": 0.0,
+      "pairwise_random_forest_ssi": 6.661338147750939e-16,
+      "gdm": 0.0,
+      "siamese_ensemble_ssi": 0.0
+    },
+    "malaysia_safe__author_compatible": {
+      "training_mean": 0.0,
+      "training_median": 0.0,
+      "ssi_raw_euclidean": 0.0,
+      "ssi_isotonic": 0.0,
+      "pairwise_random_forest_ssi": 3.3306690738754696e-16,
+      "gdm": 0.0,
+      "siamese_ensemble_ssi": 0.0023044586181639737
+    },
+    "malaysia_safe__filtered": {
+      "training_mean": 0.0,
+      "training_median": 0.0,
+      "ssi_raw_euclidean": 0.0,
+      "ssi_isotonic": 0.0,
+      "pairwise_random_forest_ssi": 3.3306690738754696e-16,
+      "gdm": 0.0,
+      "siamese_ensemble_ssi": 0.0
+    },
+    "taiwan__author_compatible": {
+      "training_mean": 0.0,
+      "training_median": 0.0,
+      "ssi_raw_euclidean": 0.0,
+      "ssi_isotonic": 0.0,
+      "pairwise_random_forest_ssi": 4.440892098500626e-16,
+      "gdm": 0.0,
+      "siamese_ensemble_ssi": 5.064010620114967e-05
+    },
+    "taiwan__filtered": {
+      "training_mean": 0.0,
+      "training_median": 0.0,
+      "ssi_raw_euclidean": 0.0,
+      "ssi_isotonic": 0.0,
+      "pairwise_random_forest_ssi": 5.551115123125783e-16,
+      "gdm": 0.0,
+      "siamese_ensemble_ssi": 0.0
+    },
+    "usa__author_compatible": {
+      "training_mean": 0.0,
+      "training_median": 0.0,
+      "ssi_raw_euclidean": 0.0,
+      "ssi_isotonic": 0.0,
+      "pairwise_random_forest_ssi": 4.440892098500626e-16,
+      "gdm": 0.0,
+      "siamese_ensemble_ssi": 0.00015249252319338158
+    },
+    "usa__filtered": {
+      "training_mean": 0.0,
+      "training_median": 0.0,
+      "ssi_raw_euclidean": 0.0,
+      "ssi_isotonic": 0.0,
+      "pairwise_random_forest_ssi": 4.440892098500626e-16,
+      "gdm": 0.0,
+      "siamese_ensemble_ssi": 0.0
+    }
+  },
+  "final_refit_siamese_mae_differences": [
+    {
+      "holdout": "india",
+      "condition": "author_compatible",
+      "role": "familiar_test",
+      "ensemble_mae_difference": 0.0
+    },
+    {
+      "holdout": "india",
+      "condition": "author_compatible",
+      "role": "unseen_test",
+      "ensemble_mae_difference": 0.0
+    },
+    {
+      "holdout": "india",
+      "condition": "filtered",
+      "role": "familiar_test",
+      "ensemble_mae_difference": 0.0
+    },
+    {
+      "holdout": "india",
+      "condition": "filtered",
+      "role": "unseen_test",
+      "ensemble_mae_difference": 0.0
+    },
+    {
+      "holdout": "malaysia_safe",
+      "condition": "author_compatible",
+      "role": "familiar_test",
+      "ensemble_mae_difference": 2.0274348969798184e-05
+    },
+    {
+      "holdout": "malaysia_safe",
+      "condition": "author_compatible",
+      "role": "unseen_test",
+      "ensemble_mae_difference": 4.224942439812196e-05
+    },
+    {
+      "holdout": "malaysia_safe",
+      "condition": "filtered",
+      "role": "familiar_test",
+      "ensemble_mae_difference": 0.0
+    },
+    {
+      "holdout": "malaysia_safe",
+      "condition": "filtered",
+      "role": "unseen_test",
+      "ensemble_mae_difference": 0.0
+    },
+    {
+      "holdout": "taiwan",
+      "condition": "author_compatible",
+      "role": "familiar_test",
+      "ensemble_mae_difference": 3.7973175945338333e-07
+    },
+    {
+      "holdout": "taiwan",
+      "condition": "author_compatible",
+      "role": "unseen_test",
+      "ensemble_mae_difference": -4.32491435795046e-06
+    },
+    {
+      "holdout": "taiwan",
+      "condition": "filtered",
+      "role": "familiar_test",
+      "ensemble_mae_difference": 0.0
+    },
+    {
+      "holdout": "taiwan",
+      "condition": "filtered",
+      "role": "unseen_test",
+      "ensemble_mae_difference": 0.0
+    },
+    {
+      "holdout": "usa",
+      "condition": "author_compatible",
+      "role": "familiar_test",
+      "ensemble_mae_difference": -2.4903864170033874e-06
+    },
+    {
+      "holdout": "usa",
+      "condition": "author_compatible",
+      "role": "unseen_test",
+      "ensemble_mae_difference": 2.5653804673814173e-05
+    },
+    {
+      "holdout": "usa",
+      "condition": "filtered",
+      "role": "familiar_test",
+      "ensemble_mae_difference": 0.0
+    },
+    {
+      "holdout": "usa",
+      "condition": "filtered",
+      "role": "unseen_test",
+      "ensemble_mae_difference": 0.0
+    }
+  ],
+  "neural_refits_bit_identical_in_all_cells": false,
+  "legacy_script_refit_comparison": "For Malaysia sensitivity seed 42, the unmodified original training functions reproduce the reorganized refit state hash, rather than the frozen historical state hash. The discrepancy predates this reorganization; its original numerical cause is unverified.",
+  "selection_test_scope": "One complete 36-fit SSI forest search, plus one neural fit from each selection stage. Full neural selection searches have not been rerun.",
+  "bootstrap_scope": {
+    "interval_rows": 440,
+    "replicates_per_group": 2000,
+    "confidence_intervals_match_exactly": true,
+    "transfer_criterion_matches": true
+  }
+}
