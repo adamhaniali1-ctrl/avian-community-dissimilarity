@@ -5,6 +5,7 @@ title: "Avian community dissimilarity: analysis and reproducibility code"
 authors:
   - family-names: Ali
     given-names: Adam
+doi: 10.5281/zenodo.24394783
 version: 1.0.0
 date-released: 2026-11-20
 url: "https://github.com/adamhaniali1-ctrl/avian-community-dissimilarity"

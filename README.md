@@ -4,6 +4,8 @@ Code and archived results for Adam Ali's study, *Predicting Avian Community Diss
 
 This study predicts differences in bird community composition from 60 soundscape indices. Four datasets are evaluated in turn as withheld datasets. Models improve on constant predictions within familiar datasets, but these improvements do not persist in the withheld datasets. The processed observations come from [Sethi et al. (2023)](https://doi.org/10.1038/s41559-023-02148-z); see [attribution and licenses](NOTICE.md).
 
+Permanent code archive: [Zenodo 10.5281/zenodo.24394783](https://doi.org/10.5281/zenodo.24394783).
+
 ## Setup
 
 The recorded environment is Python 3.13.3 and R 4.6.1, with the package versions in `requirements.txt` and R package `gdm` version 1.6.0-7. CPU execution was used. Other versions or hardware can produce numerical differences.

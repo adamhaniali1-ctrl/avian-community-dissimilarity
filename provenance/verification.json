@@ -204,5 +204,16 @@
     "fits": 36,
     "selected_candidate": "candidate_008",
     "matches_archived_selection": true
+  },
+  "local_preservation": {
+    "original_files_unchanged_including_timestamps": 407,
+    "historical_updated_files_preserved": 407
+  },
+  "release": {
+    "github": "https://github.com/adamhaniali1-ctrl/avian-community-dissimilarity/releases/tag/v1.0.0",
+    "code_doi": "10.5281/zenodo.24394783",
+    "data_doi": "10.5281/zenodo.24394649",
+    "review_archive_sha256": "b8fc484318429d8d96be1fded0257e1a14b9d44bdec03eb22f70656251459dff",
+    "historical_archive_sha256": "740815b95748cf35ce59a6854f453b393faa0b9b7cc0b93da11aac54a3bd5e7a"
   }
 }
